@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+
+	
+	<h:form>
+		
+		<h:outputLabel value="Nombres" for="nombres"/>
+		<h:inputText value="#{clienteMb.cliente.nombres}" />
+		
+		<h:outputLabel value="Cedula" for="cedula"/>
+		<h:inputText value="#{clienteMb.cliente.cedula}" />
+		
+		<h:outputLabel value="Celular" for="celular"/>
+		<h:inputText value="#{clienteMb.cliente.cedular}" />
+		
+		<h:outputLabel value="Cuenta" for="cuenta"/>
+		<h:inputText value="#{clienteMb.cliente.cuenta}" />
+		<h:outputLabel value="Saldo Inicial" for="saldo"/>
+		<h:inputText value="#{clienteMb.cliente.saldo}" />
+		
+		<h:commandButton action="#{clienteMb.crearCliente()}" value="Crear Cliente" />
+		
+	</h:form>
+	
+	
+	<h:dataTable value="#{clienteMb.clientes}" var="cliente">
+		<h:column>
+			<f:facet name="header">Nombres</f:facet>
+			#{cliente.nombres}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Cedula</f:facet>
+			#{cliente.cedula}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Celular</f:facet>
+			#{cliente.cedular}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Saldo</f:facet>
+			#{cliente.saldo}
+		</h:column>
+	</h:dataTable>
+	
+
+
+</body> 
+</html>

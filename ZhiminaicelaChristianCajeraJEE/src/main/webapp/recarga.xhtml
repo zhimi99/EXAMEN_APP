@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+
+	
+	<h:form>
+		
+		<h:outputLabel value="Cedula - Cuenta" for="cedula"/>
+		<h:inputText value="#{recargaMb.cuentaNumero}" />
+		
+		<h:outputLabel value="Celular" for="celular"/>
+		<h:inputText value="#{recargaMb.celular}" />
+		
+		<h:outputLabel value="Valor" for="valor"/>
+		<h:inputText value="#{recargaMb.saldo}" />
+		
+		<h:commandButton action="#{recargaMb.recargar()}" value="Realizar recarga" />
+		<h:outputLabel value="#{recargaMb.mensaje}" />
+	</h:form>
+	
+
+</body> 
+</html>
